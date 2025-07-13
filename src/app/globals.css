@@ -1,0 +1,206 @@
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f8f8f9;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+em,
+blockquote,
+cite,
+abbr,
+address,
+q,
+code,
+pre,
+mark,
+small,
+sub,
+sup,
+del,
+ins,
+input,
+textarea,
+button,
+label,
+select,
+option,
+ul,
+ol,
+li,
+dl,
+dt,
+dd {
+  font-family: var(--font-primary), sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.mineWraper {
+display: flex;
+flex-direction: column;
+gap: 20px
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.topmenuborder {
+  width: 100%;
+  border-bottom: 1px solid #e8f2ff;
+  display: flex;
+  justify-content: center;
+}
+
+.topmenu {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.topnav,
+.topnav ul {
+  display: flex;
+  color: #45556c;
+  font-size: 12px;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.topnav ul li {
+  padding: 10px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 35px;
+  margin-right: 5px;
+}
+
+.topnav ul li:hover {
+  background-color: #b8bfc91f;
+}
+
+.topnav button {
+  border: 1px solid #98acc9;
+  border-radius: 35px;
+  padding: 5px 10px 5px 10px;
+  font-size: 12px;
+}
+.mine-search {
+  width: 80%;
+  margin: 20px;
+  background: linear-gradient(
+        rgba(0, 0, 0, 0.28) 0%,
+        rgba(0, 0, 0, 0.1) 65.42%,
+        rgba(0, 0, 0, 0.94) 100%
+      )
+      center center / cover,
+    url(https://home.ss.ge/images/home-filter/mainban3.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  border-radius: 35px;
+  padding: 80px;
+  gap: 30px;
+}
+
+.mine-search p {
+  font-weight: bolder;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+  font-size: 30px;
+}
+
+.searchfields {
+  background-color: white;
+  border-radius: 35px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.searchfields select,
+.searchfields input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.searchfields select {
+  width: 200px;
+  margin-left: 25px;
+}
+
+.searchfields input {
+  margin-left: 10px;
+  margin-right: 50px;
+}
+
+.searchdevider {
+  width: 1.2px;
+  height: 20px;
+  background: #b8bfc9;
+}
+
+.searchfields button {
+  background: #ff7b00;
+  background: linear-gradient(to right, #ff8b1e, #ff381e);
+  color: white;
+  border: none;
+  outline: none;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-radius: 35px;
+  margin: 5px;
+}
+
+.min-posts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
