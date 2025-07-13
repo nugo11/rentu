@@ -2,6 +2,8 @@ import { MdOutlineArticle } from "react-icons/md";
 import { CiCircleInfo } from "react-icons/ci";
 import { FiHelpCircle } from "react-icons/fi";
 import Carusel from "./comp/carosuel";
+import Carusel1 from "./comp/carousel-news";
+import Services from "./comp/services";
 
 export default function Home() {
   return (
@@ -49,6 +51,8 @@ export default function Home() {
       </div>
       <div className="min-posts">
         <Carusel />
+        <Services />
+        <Carusel1 />
       </div>
     </div>
   );
