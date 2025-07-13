@@ -133,3 +133,11 @@
 .dotebi button:hover {
   border:2px solid #ffa85757;
 }
+
+#popular {
+  color: #ff381e;
+}
+
+#addpad {
+  margin-bottom: 100px;
+}

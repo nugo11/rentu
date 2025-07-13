@@ -1,0 +1,76 @@
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #020618;
+}
+
+.fotfirst {
+display: flex;
+align-items: center;
+gap: 15px;
+padding: 50px;
+border-bottom: 1px solid rgba(255, 255, 255, 0.192);
+}
+
+.fotfirst a {
+    color: #fff;
+    background: linear-gradient(to right, #ff8b1e, #ff381e);
+    border: none;
+    border-radius: 35px;
+    outline: none;
+    margin: 5px;
+    padding: 9px 20px;
+    opacity: 0.3;
+    transition: 0.5s;
+    font-size: 12px;
+}
+
+.fotfirst a:hover {
+    opacity: 1;
+}
+
+.fotersecond {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.socsect {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.socsect h3 {
+    font-size: 15px;
+}
+
+.socicons {
+    font-size: 40px;
+    display: flex;
+    gap: 15px
+}
+
+.sectcont {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.sectcont a {
+    font-size: 12px;
+}
+
+.sectcont h3 {
+    font-size: 15px;
+}
+
+.sectpricacy {
+    color: white;
+}

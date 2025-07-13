@@ -4,6 +4,9 @@ import { FiHelpCircle } from "react-icons/fi";
 import Carusel from "./comp/carosuel";
 import Carusel1 from "./comp/carousel-news";
 import Services from "./comp/services";
+import Promo from "./comp/promo";
+import Footer from "./comp/footer";
+import Popular from "./comp/popular";
 
 export default function Home() {
   return (
@@ -53,7 +56,10 @@ export default function Home() {
         <Carusel />
         <Services />
         <Carusel1 />
+        <Promo />
+        <Popular />
       </div>
+      <Footer />
     </div>
   );
 }
