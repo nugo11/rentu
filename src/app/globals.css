@@ -120,11 +120,13 @@ gap: 20px
   background-color: #b8bfc91f;
 }
 
-.topnav button {
+#logbut {
   border: 1px solid #98acc9;
   border-radius: 35px;
   padding: 5px 10px 5px 10px;
   font-size: 12px;
+  display: grid;
+  place-items: center;
 }
 .mine-search {
   width: 80%;
@@ -206,3 +208,35 @@ gap: 20px
   gap: 80px
 }
 
+.profbut {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.profileajax {
+  position: absolute;
+  top: 50px;
+  right: 0
+}
+
+.profileajax ul {
+    display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 35px;
+  padding: 15px;
+  width: 280px;
+}
+
+.profileajax ul li {
+  margin-bottom: 10px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.profileajax ul li svg {
+  font-size: 20px;
+}

@@ -1,7 +1,4 @@
-import "./globals.css";
 import { Noto_Sans_Georgian } from "next/font/google";
-import Header from "./comp/header";
-import Footer from "./comp/footer";
 
 const notoSansGeorgian = Noto_Sans_Georgian({
   subsets: ["latin", "georgian"],
@@ -10,22 +7,16 @@ const notoSansGeorgian = Noto_Sans_Georgian({
 });
 
 export const metadata = {
-  title: "RENTU: იქირავე ბინები საათობრივად",
+  title: "RENTU: რეგისტრაცია / ავტორიზცია",
   description:
     "შეგიძლიათ დაჯავშნოთ სახლები საათობრივად თქვენს საყვარელ ადგილას, აირჩიეთ 100-ზე მეტი ვარიანტიდან და დაჯავშნეთ საქართველოს მასშტაბით. ისარგებლეთ უამრავი კომფორტული სერვისით.",
 };
 
-export default function RootLayout({ children }) {
-
-
+export default function LoginLayout({ children }) {
   return (
     <html lang="ka">
       <body className={notoSansGeorgian.className}>
-        <div className="mineWraper">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        {children}
       </body>
     </html>
   );
