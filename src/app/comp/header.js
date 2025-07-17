@@ -9,37 +9,40 @@ import { CiCirclePlus } from "react-icons/ci";
 import { CgProfile } from "react-icons/cg";
 import { IoMdLogOut } from "react-icons/io";
 import { CiBookmark } from "react-icons/ci";
-import { useRouter } from 'next/navigation';
-import { signOut } from 'firebase/auth';
-
+import { useRouter } from "next/navigation";
+import { signOut } from "firebase/auth";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+  const isLoginPage = pathname === "/login";
+
   const [user, setUser] = useState(null);
-  const [profileajax, setProfileAjax] = useState(false);
+  const [showProfileAjax, setShowProfileAjax] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
 
-    return () => unsubscribe(); // cleanup
+    return () => unsubscribe(); 
   }, []);
 
-
-   const router = useRouter();
+  const router = useRouter();
 
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      router.push('/login'); 
+      router.push("/login");
     } catch (error) {
       console.error("Logout error:", error);
     }
   };
 
+
   return (
     <>
-      <div className="header">
+     {isLoginPage ? undefined : <div className="header">
         <div className="topmenuborder">
           <div className="topmenu">
             <div className="logo">RENTU</div>
@@ -63,39 +66,34 @@ export default function Header() {
               {user ? (
                 <div className="profbut">
                   <a
-                    onClick={() =>
-                      profileajax === false
-                        ? setProfileAjax(true)
-                        : setProfileAjax(false)
-                    }
+                    onClick={() => setShowProfileAjax(prev => !prev)}
                     id="logbut"
-                    style={{cursor: 'pointer'}}
+                    style={{ cursor: "pointer" }}
                   >
                     პროფილი
                   </a>
-                  <div
-                    style={
-                      profileajax === false
-                        ? {
-                            visibility: "none",
-                            opacity: 0,
-                            height: "0px",
-                            transition: '0.5s'
-                          }
-                        : {
-                            visibility: "visible",
-                            opacity: 1,
-                            transition: '0.5s'
-                          }
-                    }
-                    className="profileajax"
-                  >
+                  <div id={showProfileAjax ? "falsehid" : undefined} className="profileajax">
                     <ul>
-                      <li><CiCirclePlus />განცხადების დამატება</li>
-                      <li><CgProfile />ჩემი პროფილი</li>
-                      <li><MdOutlineArticle />ჩემი განცხადებები</li>
-                      <li><CiBookmark />შენახული განცხადებები</li>
-                      <li style={{cursor: 'pointer'}} onClick={handleLogout}><IoMdLogOut style={{color: 'red'}} />გასვლა</li>
+                      <li>
+                        <CiCirclePlus />
+                        განცხადების დამატება
+                      </li>
+                      <li>
+                        <CgProfile />
+                        ჩემი პროფილი
+                      </li>
+                      <li>
+                        <MdOutlineArticle />
+                        ჩემი განცხადებები
+                      </li>
+                      <li>
+                        <CiBookmark />
+                        შენახული განცხადებები
+                      </li>
+                      <li style={{ cursor: "pointer" }} onClick={handleLogout}>
+                        <IoMdLogOut style={{ color: "red" }} />
+                        გასვლა
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -121,7 +119,7 @@ export default function Header() {
             <button>ძებნა</button>
           </div>
         </div>
-      </div>
+      </div>}
     </>
   );
 }

@@ -6,6 +6,7 @@ body {
 
 body {
   background-color: #f8f8f9;
+  font-family: "Noto Sans Georgian", sans-serif;
 }
 h1,
 h2,
@@ -66,9 +67,9 @@ button {
 }
 
 .mineWraper {
-display: flex;
-flex-direction: column;
-gap: 20px
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .header {
@@ -127,7 +128,13 @@ gap: 20px
   font-size: 12px;
   display: grid;
   place-items: center;
+  transition: 0.5s;
 }
+
+#logbut:hover {
+  background-color: #e4e6e9;
+}
+
 .mine-search {
   width: 80%;
   margin: 20px;
@@ -205,7 +212,7 @@ gap: 20px
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 80px
+  gap: 80px;
 }
 
 .profbut {
@@ -217,11 +224,12 @@ gap: 20px
 .profileajax {
   position: absolute;
   top: 50px;
-  right: 0
+  right: 0;
+ display: none;
 }
 
 .profileajax ul {
-    display: flex;
+  display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 35px;
@@ -234,9 +242,29 @@ gap: 20px
   font-size: 13px;
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 10px;
 }
 
 .profileajax ul li svg {
   font-size: 20px;
+}
+
+#falsehid {
+  display: block;
+}
+
+.input-error {
+  border: 1px solid red !important;
+}
+
+.input-chack {
+  border: 1px solid rgb(7, 126, 31) !important;
+}
+
+#pasrul {
+  text-align: start;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #ff381e;
+  letter-spacing: 0.8px;
 }

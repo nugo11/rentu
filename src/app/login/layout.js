@@ -1,3 +1,5 @@
+'use client';
+import { usePathname } from "next/navigation";
 import { Noto_Sans_Georgian } from "next/font/google";
 
 const notoSansGeorgian = Noto_Sans_Georgian({
@@ -6,16 +8,17 @@ const notoSansGeorgian = Noto_Sans_Georgian({
   display: "swap",
 });
 
-export const metadata = {
-  title: "RENTU: რეგისტრაცია / ავტორიზცია",
-  description:
-    "შეგიძლიათ დაჯავშნოთ სახლები საათობრივად თქვენს საყვარელ ადგილას, აირჩიეთ 100-ზე მეტი ვარიანტიდან და დაჯავშნეთ საქართველოს მასშტაბით. ისარგებლეთ უამრავი კომფორტული სერვისით.",
-};
+
 
 export default function LoginLayout({ children }) {
+
+  const pathname = usePathname();
+  const isLoginPage = pathname === "/login";
+
+
   return (
     <html lang="ka">
-      <body className={notoSansGeorgian.className}>
+      <body className={notoSansGeorgian.className} id={isLoginPage ? "login-page" : ""}>
         {children}
       </body>
     </html>
