@@ -91,7 +91,9 @@ export default function LoginPage() {
 
       await sendEmailVerification(user);
 
-      setInfo("რეგისტრაცია წარმატებით დასრულდა. გთხოვთ, გადაამოწმოთ ელფოსტა. (თუ შეტყობინებას ვერ ნახულობთ, შეამოწმეთ Spam)");
+      setInfo(
+        "რეგისტრაცია წარმატებით დასრულდა. გთხოვთ, გადაამოწმოთ ელფოსტა. (თუ შეტყობინებას ვერ ნახულობთ, შეამოწმეთ Spam)"
+      );
       resetForm();
       setIsRegistering(false);
     } catch (err) {

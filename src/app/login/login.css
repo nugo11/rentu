@@ -136,11 +136,6 @@
   text-decoration: underline;
 }
 
-#login-page .footer,
-#login-page .header {
-  display: none;
-}
-
 .link-button {
   background: none;
   border: none;
